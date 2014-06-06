@@ -108,6 +108,7 @@ colorpicker-alpha,
   margin-top: 0;
   background-color: rgba(32, 38, 40, 0.9);
   border-radius: 8px;
+  width: 130px;
 }
 .colorpicker-position-top .dropdown-menu::after {
   border-top: 6px solid rgba(32, 38, 40, 0.9);
@@ -154,14 +155,6 @@ colorpicker-alpha,
   top: 10px;
   left: auto;
   right: -6px;
-}
-colorpicker-preview {
-  display: block;
-  height: 10px;
-  margin: 0px;
-  clear: both;
-  background-position: 0 100%;
-  width: 120px;
 }
 
 #hexa-input {

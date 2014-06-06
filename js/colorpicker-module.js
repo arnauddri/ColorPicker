@@ -277,7 +277,6 @@ angular.module('colorpicker.module', [])
                       '<colorpicker-saturation><i></i></colorpicker-saturation>' +
                       '<colorpicker-hue><i></i></colorpicker-hue>' +
                       '<colorpicker-alpha><i></i></colorpicker-alpha>' +
-                      '<colorpicker-preview></colorpicker-preview>' +
                       inputTemplate +
                       '<input id="hexa-input" type="text" name="hexa">' +
                       '<button class="close close-colorpicker">&times;</button>' +
@@ -356,7 +355,19 @@ angular.module('colorpicker.module', [])
               });
 
           hexaInput
+            .bind('mousedown', function() {
+              event.stopPropagation();
+            });
+
+          hexaInput
+            .bind('keydown', function() {
+              event.stopPropagation();
+            });
+
+          hexaInput
               .on('click', function(event) {
+                event.stopPropagation();
+                event.preventDefault();
                 hexaInput[0].focus();
                 document.onkeypress = colorTyped;
                 document.onkeyup = colorTyped;
